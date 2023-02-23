@@ -1,5 +1,6 @@
 import 'package:appwrite/appwrite.dart';
 import 'package:cowrite/controllers/repositories/auth_repo.dart';
+import 'package:cowrite/controllers/state/auth_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../utils/constants.dart';
@@ -13,6 +14,11 @@ abstract class Dependency {
 
 abstract class Repository {
   static Provider<AuthRepository> get auth => AuthRepository.provider;
+}
+
+abstract class AppState {
+  static StateNotifierProvider<AuthService, AuthState> get auth =>
+      AuthService.provider;
 }
 
 final _clientProvider = Provider<Client>(
