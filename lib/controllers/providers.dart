@@ -1,4 +1,5 @@
 import 'package:appwrite/appwrite.dart';
+import 'package:cowrite/controllers/repositories/auth_repo.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../utils/constants.dart';
@@ -8,6 +9,10 @@ abstract class Dependency {
   static Provider<Databases> get database => _databaseProvider;
   static Provider<Account> get account => _accountProvider;
   static Provider<Realtime> get realtime => _realtimeProvider;
+}
+
+abstract class Repository {
+  static Provider<AuthRepository> get auth => AuthRepository.provider;
 }
 
 final _clientProvider = Provider<Client>(
