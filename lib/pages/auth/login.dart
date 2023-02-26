@@ -5,10 +5,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("loginPage"),
-      ),
+    return Scaffold(
+      body: Column(children: const [Text("nice")]),
     );
   }
 }

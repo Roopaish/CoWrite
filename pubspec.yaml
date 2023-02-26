@@ -13,8 +13,7 @@ dependencies:
   logging: ^1.1.1
   flutter_riverpod: ^2.2.0
   routemaster: ^1.0.1
-  appwrite: ^8.2.2
-  equatable: ^2.0.5
+  google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:

@@ -1,3 +1,4 @@
+import 'package:cowrite/res/theme.dart';
 import 'package:cowrite/utils/logging.dart';
 import 'package:cowrite/utils/routes.dart';
 import 'package:flutter/material.dart';
@@ -20,9 +21,10 @@ class _CoWriteState extends ConsumerState<CoWrite> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: defaultTheme(),
       debugShowCheckedModeBanner: false,
       routerDelegate: RoutemasterDelegate(routesBuilder: (context) {
-        return routesLoggedOut;
+        return loggedOutRoute;
       }),
       routeInformationParser: const RoutemasterParser(),
     );
